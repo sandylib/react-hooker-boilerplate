@@ -1,33 +1,87 @@
-.App {
-  text-align: center;
+/* Style guide variables */
+:root {
+  --dark: #0d0d0f;
+  --dark-grey: #1e1f20;
+  --dark-grey-two: #2b2c2e;
+  --brown-grey: #939393;
+  --kelley-green: #008542;
+  --azure: #008dff;
+  --sunflower-yellow: #ffdc00;
+  --bright-orange: #ff6d00;
+  --baby-blue: #a6d8ff;
+  --light-rose: #fac9d4;
+  --red: #ff0000;
+  --pine-green: #12472d;
+  --purplish-brown: #524145;
+  --dark-blue-grey: #142c41;
+  --white-12: rgba(255, 255, 255, 0.12);
+  --white: #ffffff;
+  --turquoise-green: #00ee84;
+  --orange-yellow: #ffa500;
+  --burgundy: #530013;
+
+  --font: Tahoma;
+  --XXSmall: 9px;
+  --XSmall: 10px;
+  --small: 11px;
+  --body: 13px;
+  --title: 16px;
+  --headline: 22px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+body {
+  /* This means the overscroll effect when using scroll wheel won't show white */
+  /* background-color: var(--dark); */
+  font-family: var(--font);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* App viewport should be at a minimum the size of the device viewport */
+.app {
+  display: grid;
+  grid-template-rows: 48px 1fr 128px;
+  grid-template-columns: 272px 1fr;
+  grid-template-areas: "header header"
+                      "sidebar content"
+                      "sidebar footer";
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--dark);
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  grid-area: header;
+  background-color: var(--dark-grey-two);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--dark-grey);
+}
+
+.content {
+  grid-area: content;
+  grid-template-rows: min-content 1fr;
+  display: grid;
+  background-color: var(--dark)
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--dark);
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.hightlight {
+  background-color: var(--kelley-green);
 }
