@@ -1,7 +1,6 @@
 {
   "name": "react-hooker-boilerplate",
   "version": "0.1.0",
-  "private": true,
   "main": "dist/index.js",
   "dependencies": {
     "classnames": "^2.2.6",
