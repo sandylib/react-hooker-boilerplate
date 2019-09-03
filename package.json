@@ -2,6 +2,7 @@
   "name": "react-hooker-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.js",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.9.0",
@@ -15,6 +16,25 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sandylib/react-hooker-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "react-hook",
+    "react-hooks",
+    "context-api",
+    "useContext",
+    "useReducer",
+    "context api"
+  ],
+  "author": "sandylib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sandylib/react-hooker-boilerplate/issues"
+  },
+  "homepage": "https://github.com/sandylib/react-hooker-boilerplate#readme",
   "eslintConfig": {
     "extends": "react-app"
   },
