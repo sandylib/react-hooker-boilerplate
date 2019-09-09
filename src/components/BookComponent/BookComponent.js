@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStateValue, useDispatch } from '../../store/configureStore';
-import { UPDATE_SELECTED_BOOK } from '../../constants/actionConstants';
 import BookInfo from './BookInfo';
+import { updateSelectedBook } from '../../reducers/book.action';
 
 export default function BookComponent() {
 
@@ -10,12 +10,7 @@ export default function BookComponent() {
 
     const dispatch = useDispatch();
 
-    const handleOnClick = book => 
-        dispatch({
-            type: UPDATE_SELECTED_BOOK,
-            selected: book
-        });
-  
+    const handleOnClick = book => updateSelectedBook(dispatch, book)
 
     return (
         <table>

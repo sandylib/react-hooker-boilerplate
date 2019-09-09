@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStateValue, useDispatch } from '../../store/configureStore';
-import { UPDATE_SELECTED_USER } from '../../constants/actionConstants';
+import { updateSelectedUser } from '../../reducers/user.action';
 
 const UserInfo = ({user, selected, onClick}) => {
 
@@ -34,11 +34,8 @@ export default function UserComponent() {
 
     const dispatch = useDispatch();
 
-    const handleOnClick = user => 
-        dispatch({
-            type: UPDATE_SELECTED_USER,
-            selected: user
-        });
+    const handleOnClick = user => updateSelectedUser(dispatch, user);
+    
     return (
         <table>
         <tbody>
