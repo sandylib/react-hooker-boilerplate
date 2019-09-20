@@ -3,8 +3,8 @@ import React, {createContext, useContext, useReducer} from 'react';
 
 import rootReducer, { initialState } from '../reducers/index';
 
-const StateContext = createContext();
-const DispatchContext = createContext();
+export const StateContext = createContext();
+export const DispatchContext = createContext();
 
 export const useStateValue = () => useContext(StateContext);
 export const useDispatch = () => useContext(DispatchContext);
